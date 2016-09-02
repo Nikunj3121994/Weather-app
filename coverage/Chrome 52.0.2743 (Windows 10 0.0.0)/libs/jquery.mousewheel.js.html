@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for libs\jquery.mousewheel.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">libs/</a> jquery.mousewheel.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.65% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>21/97</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/80</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45.45% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>21/90</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*!
+ * jQuery Mousewheel 3.1.13
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license
+ * http://jquery.org/license
+ */
+&nbsp;
+(function (factory) {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if ( typeof define === 'function' &amp;&amp; define.amd ) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else <span class="cstat-no" title="statement not covered" >if (typeof exports === 'object') {</span>
+    // Node/CommonJS style for Browserify
+<span class="cstat-no" title="statement not covered" >    module.exports = factory;</span>
+  } else {
+    // Browser globals
+<span class="cstat-no" title="statement not covered" >    factory(jQuery);</span>
+  }
+}(function ($) {
+&nbsp;
+  var toFix  = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'],
+    toBind = ( 'onwheel' in document || <span class="branch-1 cbranch-no" title="branch not covered" >document.documentMode &gt;= 9 </span>) ?
+      ['wheel'] : <span class="branch-1 cbranch-no" title="branch not covered" >['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'],</span>
+    slice  = Array.prototype.slice,
+    nullLowestDeltaTimeout, lowestDelta;
+&nbsp;
+  <span class="missing-if-branch" title="else path not taken" >E</span>if ( $.event.fixHooks ) {
+    for ( var i = toFix.length; i; ) {
+      $.event.fixHooks[ toFix[--i] ] = $.event.mouseHooks;
+    }
+  }
+&nbsp;
+  var special = $.event.special.mousewheel = {
+    version: '3.1.12',
+&nbsp;
+    setup: function() {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if ( this.addEventListener ) {
+        for ( var i = toBind.length; i; ) {
+          this.addEventListener( toBind[--i], handler, false );
+        }
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.onmousewheel = handler;</span>
+      }
+      // Store the line height and page height for this particular element
+      $.data(this, 'mousewheel-line-height', special.getLineHeight(this));
+      $.data(this, 'mousewheel-page-height', special.getPageHeight(this));
+    },
+&nbsp;
+    teardown: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      if ( this.removeEventListener ) {</span>
+<span class="cstat-no" title="statement not covered" >        for ( var i = toBind.length; i; ) {</span>
+<span class="cstat-no" title="statement not covered" >          this.removeEventListener( toBind[--i], handler, false );</span>
+        }
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.onmousewheel = null;</span>
+      }
+      // Clean up the data we added to the element
+<span class="cstat-no" title="statement not covered" >      $.removeData(this, 'mousewheel-line-height');</span>
+<span class="cstat-no" title="statement not covered" >      $.removeData(this, 'mousewheel-page-height');</span>
+    },
+&nbsp;
+    getLineHeight: function(elem) {
+      var $elem = $(elem),
+        $parent = $elem['offsetParent' in $.fn ? 'offsetParent' : <span class="branch-1 cbranch-no" title="branch not covered" >'parent']</span>();
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!$parent.length) {
+<span class="cstat-no" title="statement not covered" >        $parent = $('body');</span>
+      }
+      return parseInt($parent.css('fontSize'), 10) || <span class="branch-1 cbranch-no" title="branch not covered" >parseInt($elem.css('fontSize'), 10) </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >16;</span>
+    },
+&nbsp;
+    getPageHeight: function(elem) {
+      return $(elem).height();
+    },
+&nbsp;
+    settings: {
+      adjustOldDeltas: true, // see shouldAdjustOldDeltas() below
+      normalizeOffset: true  // calls getBoundingClientRect for each event
+    }
+  };
+&nbsp;
+  $.fn.extend({
+    mousewheel: <span class="fstat-no" title="function not covered" >function(fn) {</span>
+<span class="cstat-no" title="statement not covered" >      return fn ? this.bind('mousewheel', fn) : this.trigger('mousewheel');</span>
+    },
+&nbsp;
+    unmousewheel: <span class="fstat-no" title="function not covered" >function(fn) {</span>
+<span class="cstat-no" title="statement not covered" >      return this.unbind('mousewheel', fn);</span>
+    }
+  });
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function handler(event) {</span>
+<span class="cstat-no" title="statement not covered" >    var orgEvent   = event || window.event,</span>
+      args       = slice.call(arguments, 1),
+      delta      = 0,
+      deltaX     = 0,
+      deltaY     = 0,
+      absDelta   = 0,
+      offsetX    = 0,
+      offsetY    = 0;
+<span class="cstat-no" title="statement not covered" >    event = $.event.fix(orgEvent);</span>
+<span class="cstat-no" title="statement not covered" >    event.type = 'mousewheel';</span>
+&nbsp;
+    // Old school scrollwheel delta
+<span class="cstat-no" title="statement not covered" >    if ( 'detail'      in orgEvent ) { <span class="cstat-no" title="statement not covered" >deltaY = orgEvent.detail * -1; </span>     }</span>
+<span class="cstat-no" title="statement not covered" >    if ( 'wheelDelta'  in orgEvent ) { <span class="cstat-no" title="statement not covered" >deltaY = orgEvent.wheelDelta; </span>      }</span>
+<span class="cstat-no" title="statement not covered" >    if ( 'wheelDeltaY' in orgEvent ) { <span class="cstat-no" title="statement not covered" >deltaY = orgEvent.wheelDeltaY; </span>     }</span>
+<span class="cstat-no" title="statement not covered" >    if ( 'wheelDeltaX' in orgEvent ) { <span class="cstat-no" title="statement not covered" >deltaX = orgEvent.wheelDeltaX * -1; </span>}</span>
+&nbsp;
+    // Firefox &lt; 17 horizontal scrolling related to DOMMouseScroll event
+<span class="cstat-no" title="statement not covered" >    if ( 'axis' in orgEvent &amp;&amp; orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {</span>
+<span class="cstat-no" title="statement not covered" >      deltaX = deltaY * -1;</span>
+<span class="cstat-no" title="statement not covered" >      deltaY = 0;</span>
+    }
+&nbsp;
+    // Set delta to be deltaY or deltaX if deltaY is 0 for backwards compatabilitiy
+<span class="cstat-no" title="statement not covered" >    delta = deltaY === 0 ? deltaX : deltaY;</span>
+&nbsp;
+    // New school wheel delta (wheel event)
+<span class="cstat-no" title="statement not covered" >    if ( 'deltaY' in orgEvent ) {</span>
+<span class="cstat-no" title="statement not covered" >      deltaY = orgEvent.deltaY * -1;</span>
+<span class="cstat-no" title="statement not covered" >      delta  = deltaY;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if ( 'deltaX' in orgEvent ) {</span>
+<span class="cstat-no" title="statement not covered" >      deltaX = orgEvent.deltaX;</span>
+<span class="cstat-no" title="statement not covered" >      if ( deltaY === 0 ) { <span class="cstat-no" title="statement not covered" >delta  = deltaX * -1; </span>}</span>
+    }
+&nbsp;
+    // No change actually happened, no reason to go any further
+<span class="cstat-no" title="statement not covered" >    if ( deltaY === 0 &amp;&amp; deltaX === 0 ) { <span class="cstat-no" title="statement not covered" >return; </span>}</span>
+&nbsp;
+    // Need to convert lines and pages to pixels if we aren't already in pixels
+    // There are three delta modes:
+    //   * deltaMode 0 is by pixels, nothing to do
+    //   * deltaMode 1 is by lines
+    //   * deltaMode 2 is by pages
+<span class="cstat-no" title="statement not covered" >    if ( orgEvent.deltaMode === 1 ) {</span>
+<span class="cstat-no" title="statement not covered" >      var lineHeight = $.data(this, 'mousewheel-line-height');</span>
+<span class="cstat-no" title="statement not covered" >      delta  *= lineHeight;</span>
+<span class="cstat-no" title="statement not covered" >      deltaY *= lineHeight;</span>
+<span class="cstat-no" title="statement not covered" >      deltaX *= lineHeight;</span>
+    } else <span class="cstat-no" title="statement not covered" >if ( orgEvent.deltaMode === 2 ) {</span>
+<span class="cstat-no" title="statement not covered" >      var pageHeight = $.data(this, 'mousewheel-page-height');</span>
+<span class="cstat-no" title="statement not covered" >      delta  *= pageHeight;</span>
+<span class="cstat-no" title="statement not covered" >      deltaY *= pageHeight;</span>
+<span class="cstat-no" title="statement not covered" >      deltaX *= pageHeight;</span>
+    }
+&nbsp;
+    // Store lowest absolute delta to normalize the delta values
+<span class="cstat-no" title="statement not covered" >    absDelta = Math.max( Math.abs(deltaY), Math.abs(deltaX) );</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if ( !lowestDelta || absDelta &lt; lowestDelta ) {</span>
+<span class="cstat-no" title="statement not covered" >      lowestDelta = absDelta;</span>
+&nbsp;
+      // Adjust older deltas if necessary
+<span class="cstat-no" title="statement not covered" >      if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {</span>
+<span class="cstat-no" title="statement not covered" >        lowestDelta /= 40;</span>
+      }
+    }
+&nbsp;
+    // Adjust older deltas if necessary
+<span class="cstat-no" title="statement not covered" >    if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {</span>
+      // Divide all the things by 40!
+<span class="cstat-no" title="statement not covered" >      delta  /= 40;</span>
+<span class="cstat-no" title="statement not covered" >      deltaX /= 40;</span>
+<span class="cstat-no" title="statement not covered" >      deltaY /= 40;</span>
+    }
+&nbsp;
+    // Get a whole, normalized value for the deltas
+<span class="cstat-no" title="statement not covered" >    delta  = Math[ delta  &gt;= 1 ? 'floor' : 'ceil' ](delta  / lowestDelta);</span>
+<span class="cstat-no" title="statement not covered" >    deltaX = Math[ deltaX &gt;= 1 ? 'floor' : 'ceil' ](deltaX / lowestDelta);</span>
+<span class="cstat-no" title="statement not covered" >    deltaY = Math[ deltaY &gt;= 1 ? 'floor' : 'ceil' ](deltaY / lowestDelta);</span>
+&nbsp;
+    // Normalise offsetX and offsetY properties
+<span class="cstat-no" title="statement not covered" >    if ( special.settings.normalizeOffset &amp;&amp; this.getBoundingClientRect ) {</span>
+<span class="cstat-no" title="statement not covered" >      var boundingRect = this.getBoundingClientRect();</span>
+<span class="cstat-no" title="statement not covered" >      offsetX = event.clientX - boundingRect.left;</span>
+<span class="cstat-no" title="statement not covered" >      offsetY = event.clientY - boundingRect.top;</span>
+    }
+&nbsp;
+    // Add information to the event object
+<span class="cstat-no" title="statement not covered" >    event.deltaX = deltaX;</span>
+<span class="cstat-no" title="statement not covered" >    event.deltaY = deltaY;</span>
+<span class="cstat-no" title="statement not covered" >    event.deltaFactor = lowestDelta;</span>
+<span class="cstat-no" title="statement not covered" >    event.offsetX = offsetX;</span>
+<span class="cstat-no" title="statement not covered" >    event.offsetY = offsetY;</span>
+    // Go ahead and set deltaMode to 0 since we converted to pixels
+    // Although this is a little odd since we overwrite the deltaX/Y
+    // properties with normalized deltas.
+<span class="cstat-no" title="statement not covered" >    event.deltaMode = 0;</span>
+&nbsp;
+    // Add event and delta to the front of the arguments
+<span class="cstat-no" title="statement not covered" >    args.unshift(event, delta, deltaX, deltaY);</span>
+&nbsp;
+    // Clearout lowestDelta after sometime to better
+    // handle multiple device types that give different
+    // a different lowestDelta
+    // Ex: trackpad = 3 and mouse wheel = 120
+<span class="cstat-no" title="statement not covered" >    if (nullLowestDeltaTimeout) { <span class="cstat-no" title="statement not covered" >clearTimeout(nullLowestDeltaTimeout); </span>}</span>
+<span class="cstat-no" title="statement not covered" >    nullLowestDeltaTimeout = setTimeout(nullLowestDelta, 200);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return ($.event.dispatch || $.event.handle).apply(this, args);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function nullLowestDelta() {</span>
+<span class="cstat-no" title="statement not covered" >    lowestDelta = null;</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function shouldAdjustOldDeltas(orgEvent, absDelta) {</span>
+    // If this is an older event and the delta is divisable by 120,
+    // then we are assuming that the browser is treating this as an
+    // older mouse wheel event and that we should divide the deltas
+    // by 40 to try and get a more usable deltaFactor.
+    // Side note, this actually impacts the reported scroll distance
+    // in older browsers and can cause scrolling to be slower than native.
+    // Turn this off by setting $.event.special.mousewheel.settings.adjustOldDeltas to false.
+<span class="cstat-no" title="statement not covered" >    return special.settings.adjustOldDeltas &amp;&amp; orgEvent.type === 'mousewheel' &amp;&amp; absDelta % 120 === 0;</span>
+  }
+&nbsp;
+}));
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 16 2016 11:41:10 GMT+0300 (RTZ 2 (зима))
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

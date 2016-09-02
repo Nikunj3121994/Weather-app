@@ -1,0 +1,61 @@
+<div class="swiper-slide">
+  <div class="current-day-container">
+    <div class="head-and-current-container">
+      <header>
+        <div class="last-update-time"> <%=current.timeInHour%>:<%=current.minutes%> <span class="icon icon-refresh"></span></div>
+        <h1><%=cityName%></h1>
+        <h2><%=current.fullDay%>, <%=current.month%> <%=current.date%></h2>
+      </header>
+      <div class="weather-block">
+        <span class="icon icon-<%=current.icon%> current-weather-js" data="<%=current.icon%>"></span>
+        <span class="today-temerature" data-celcius="<%=current.temperatureCelcius%>" data-forenheit="<%=current.temperatureForenheits%>"><%=current.temperatureCelcius%>&deg;<span class="weather-name">//<%=current.summary%></span></span>
+
+        <span class="icon icon-<%=current.moonPhaseIcon%> moon-phase">		<span class="time-of-moon"> <%=current.sunriseHours%>:<%=current.sunriseMinutes%> </span></span>
+      </div>
+    </div>
+    <div class="week-and-day-container">
+      <div class="weather-today-container">
+        <% _.each(hourly, function( hour ){ %>
+        <div class="interval">
+          <div class="hours"><%=hour.timeInHour%>:00</div>
+          <div class="icon icon-<%=hour.icon%>"></div>
+          <div class="tepmperature-hours" data-celcius="<%=hour.temperatureCelcius%>" data-forenheit="<%=hour.temperatureForenheits%>"><%=hour.temperatureCelcius%>&deg;</div>
+        </div>
+        <% })%>
+      </div>
+      <div class="day-information-container">
+        <div class="day-discr">
+          <div class="icon icon-humidity"></div>
+          <div class="icon-descr"><%=current.humidity%>%</div>
+        </div>
+        <div class="day-discr">
+          <span class="windBearingLetter <%= current.windBearingLetter.split('/').join('-') %>"><%= current.windBearingLetter %></span>
+          <div class="icon icon-wind-direction" style="transform: rotate(<%=current.windBearing %>deg)"></div>
+          <div class="icon-descr"><%=current.windSpeed%><sup>m/c</sup></div>
+        </div>
+        <div class="day-discr">
+          <div class="icon icon-sunrise"></div>
+          <div class="icon-descr sunrise-time"><%=current.sunriseHours%>:<%=current.sunriseMinutes%></div>
+        </div>
+        <div class="day-discr">
+          <div class="icon icon-sunset"></div>
+          <div class="icon-descr sunset-time"><%=current.sunsetHours%>:<%=current.sunsetMinutes%></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="week-weather-container">
+    <% _.each(daily, function( day ){ %>
+    <div class="week-weather-day">
+      <span class="day-of-week"><%=day.today%></span>
+      <span class="icon icon-<%=day.icon%>"></span>
+      <div class="ranger-block">
+        <span class="temperature_min" data-celcius="<%=day.temperatureCelciusMin%>" data-forenheit="<%=day.temperatureForenheitsMin%>"><%=day.temperatureCelciusMin%>&deg;</span>
+        <div class="ranger" >  </div>
+        <span class="temperature_max" data-celcius="<%=day.temperatureCelciusMax%>" data-forenheit="<%=day.temperatureForenheitsMax%>"><%=day.temperatureCelciusMax%>&deg;</span>
+      </div>
+    </div>
+    <% })%>
+  </div>
+</div>

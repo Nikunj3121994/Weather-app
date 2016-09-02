@@ -1,0 +1,42 @@
+<div class="pac-container pac-logo hide">
+</div>
+<div class="places-list-bar">
+  <div class="menu icon icon-menu">
+  </div>
+  <div id="locationField">
+    <input id="autocomplete" class="search" placeholder="Enter your address" type="text" >
+  </div>
+
+  <div class="btn-add icon icon-add"><lable for="autocomplete"></lable></div>
+  <div class="btn-delete icon icon-delete "></div>
+</div>
+<div class="places-list" id="place-view">
+
+</div>
+<div class="settings">
+  <div class="bar temperature-swap">
+
+    <input type="radio" id="celsius" name="deg" checked>
+    <label for="celsius" class="celsius" data="temperatureCelcius">&deg;C</label>
+    <input type="radio" id="forenheits" name="deg">
+    <label for="forenheits" class="forenheits" data="temperatureForenheits">&deg;F</label>
+
+    <span class="icon icon-settings"></span>
+  </div>
+  <div class="bar dyas-quantity-slider">
+
+    <p>
+      <label for="days">show weather for</label>
+      <input type="text" id="days" >
+    </p>
+    <div class="slider-range-max slider-days"></div>
+
+  </div>
+  <div class="bar reload-swaper">
+    <p>
+      <label for="minutes">update weather every</label>
+      <input type="text" id="minutes" >
+    </p>
+    <div class="slider-range-max slider-minutes"></div>
+  </div>
+</div>

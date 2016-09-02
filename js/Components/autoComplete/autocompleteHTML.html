@@ -1,0 +1,13 @@
+
+  <% _.each(matching, function( match ){ %>
+  <div class="pac-item">
+<span class="pac-item-query">
+<span class="pac-matched"><%=match.description.split(',')[0] %></span>
+      </span><span><%= match.description.split(',').slice(1)%></span>
+    <label class="checkbox-area autocomplete show-checkbox">
+      <input type="checkbox" name="cityAutoComplete" value="1" class="custom-checkbox cityAutoComplete"
+             data-placeId="<%= match.place_id%>" data-name="<%= match.description.split(',')[0] %>">
+      <span class="check-icon"></span>
+    </label>
+  </div>
+  <% })%>

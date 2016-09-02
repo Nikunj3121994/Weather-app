@@ -1,0 +1,51 @@
+.animation{
+  display: block;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -10;
+  width: 50%;
+  height: 50%;
+  overflow: visible;
+}
+@keyframes weather-animation {
+  0% {
+    top:0;
+  }
+  50% {
+    top:25%;
+    opacity: .9;
+  }
+  100% {
+    top:50%;
+    opacity: .3;
+  }
+}
+@keyframes weather-animation-cloud {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .5;
+  }
+}
+.rain{
+  background: url("../images/rain.png") 0 0 no-repeat, url("../images/rain.png") 0 -400px no-repeat;
+  animation: weather-animation 3s infinite linear;
+}
+.snow{
+  background: url("../images/snow.png") 0 0 no-repeat, url("../images/snow.png") 0 -400px no-repeat;
+  animation: weather-animation 3s infinite linear;
+}
+.cloud{
+  background: url("../images/cloud.png") 0 0 ;
+  background-size: 100% 100%;
+  width:75%;
+  height: 100%;
+  opacity: .5;
+}
+@media screen and (max-width: 768px){
+  .animation{
+    width: 100%;
+  }
+}

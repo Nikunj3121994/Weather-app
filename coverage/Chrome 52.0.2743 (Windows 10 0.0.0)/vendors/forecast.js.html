@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for vendors\forecast.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">vendors/</a> forecast.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.83% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>90/92</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>55/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.83% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>90/92</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">define(
+  [
+    'jquery',
+    'promise'
+  ],
+  function ($, Q) {
+    var forecast = function () {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (forecast.instance) {
+<span class="cstat-no" title="statement not covered" >        return forecast.instance;</span>
+      }
+      forecast.instance = this;
+    };
+&nbsp;
+&nbsp;
+    forecast.prototype.GetInfo = function (lat, lng) {
+      return Q.promise(function (resolve) {
+        $.getJSON('https://api.forecast.io/forecast/7f115475461c1e5ff7c0c1c3882f7ae4/' + lat + ',' + lng + '?callback=?', function (data1) {
+          resolve(data1);
+        });
+      });
+    };
+&nbsp;
+    forecast.prototype.forecastVendorGenerateNeededData = function (obj, city) {
+      var weather = {
+        vendor: 'forecast',
+        offset: obj.offset,
+        lat: obj.latitude,
+        lng: obj.longitude,
+        cityName: city,
+        current: obj.currently,
+        daily: obj.daily.data.slice(0, -1),
+        hourly: obj.hourly.data.slice(0, 25)
+      };
+      this.currentForecastVendor(weather);
+&nbsp;
+      this.temperatureToCelciusAndForenheitsForecastVendor([weather.current]);
+      this.sunRiseOrSunSetForecastVendor(weather.current, weather.daily[0].sunriseTime, 'sunrise', weather.offset);
+      this.sunRiseOrSunSetForecastVendor(weather.current, weather.daily[0].sunsetTime, 'sunset', weather.offset);
+      weather.daily = this.dailyInformationToNeededForecastVendor(weather.daily);
+      weather.hourly = this.hourlyInformationToNeededForecastVendor(weather.hourly);
+      return weather;
+    };
+&nbsp;
+    forecast.prototype.currentForecastVendor = function (obj) {
+      var fullNamesOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      var shortNamesOfWeek = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+      var Monthes = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December'];
+      var time = new Date(obj.current.time * 1000);
+      obj.current = {
+        humidity: Math.floor(+obj.current.humidity * 100),
+        icon: this.weatherIconToNormalForecastVendor(obj.current.icon),
+        temperature: obj.current.temperature,
+        time: obj.current.time,
+        windBearing: obj.current.windBearing,
+        windSpeed: Math.floor(+obj.current.windSpeed),
+        moonPhase: obj.daily[0].moonPhase,
+        sunrise: obj.daily[0].moonPhase,
+        timeInHour: this.getUTCTime(obj.current.time * 1000, obj.offset),
+        minutes: time.getMinutes().toString().length === 1 ? <span class="branch-0 cbranch-no" title="branch not covered" >'0' + time.getMinutes().toString() </span>: time.getMinutes(),
+        month: Monthes[time.getMonth()],
+        date: time.getDate(),
+        fullDay: fullNamesOfWeek[time.getDay()],
+        shortDay: shortNamesOfWeek[time.getDay()],
+        summary: obj.current.summary,
+        windBearingLetter: this.windBearingLetter(obj.current.windBearing),
+        moonPhaseIcon: this.moonPhaseIco(obj.daily[0].moonPhase)
+      };
+    };
+&nbsp;
+    forecast.prototype.getUTCTime = function (timestamp, offset) {
+      var d = new Date(timestamp);
+      var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+      var nd = new Date(utc + (3600000 * offset));
+      return nd.getHours();
+    };
+    forecast.prototype.moonPhaseIco = function (moon) {
+      if (moon &lt;= 0.16) {
+        return 'empty-moon';
+      } else if (moon &gt; 0.16 &amp;&amp; moon &lt;= 0.32) {
+        return 'grow-moon';
+      } else if (moon &gt; 0.32 &amp;&amp; moon &lt;= 0.48) {
+        return 'almost-full';
+      } else if (moon &gt; 0.48 &amp;&amp; moon &lt;= 0.64) {
+        return 'full-moon';
+      } else if (moon &gt; 0.64 &amp;&amp; moon &lt;= 0.8) {
+        return 'almost-old';
+      } else <span class="missing-if-branch" title="else path not taken" >E</span>if (moon &gt; 0.8) {
+        return 'old-moon';
+      }
+    };
+    forecast.prototype.windBearingLetter = function (windBearing) {
+      if (windBearing &gt;= 345 || windBearing &lt;= 30) {
+        return 'N';
+      } else if (windBearing &gt; 30 &amp;&amp; windBearing &lt;= 75) {
+        return 'N/E';
+      } else if (windBearing &gt; 75 &amp;&amp; windBearing &lt;= 105) {
+        return 'E';
+      } else if (windBearing &gt; 105 &amp;&amp; windBearing &lt;= 165) {
+        return 'S/E';
+      } else if (windBearing &gt; 165 &amp;&amp; windBearing &lt;= 195) {
+        return 'S';
+      } else if (windBearing &gt; 195 &amp;&amp; windBearing &lt;= 255) {
+        return 'S/W';
+      } else if (windBearing &gt; 255 &amp;&amp; windBearing &lt;= 285) {
+        return 'W';
+      } else <span class="missing-if-branch" title="else path not taken" >E</span>if (windBearing &gt; 285 &amp;&amp; windBearing &lt; 345) {
+        return 'N/W';
+      }
+    };
+&nbsp;
+    forecast.prototype.temperatureToCelciusAndForenheitsForecastVendor = function (array) {
+      array.forEach(function (hour) {
+        hour.temperatureCelcius = Math.floor(((+hour.temperature - 32) / 2) * 1.1);
+        hour.temperatureForenheits = Math.floor(+hour.temperature);
+      });
+    };
+&nbsp;
+    forecast.prototype.weatherIconToNormalForecastVendor = function (str) {
+      var regexp = /\-(day|night)/gim;
+      return str.replace(regexp, '');
+    };
+&nbsp;
+    forecast.prototype.sunRiseOrSunSetForecastVendor = function (obj, timeStemp, typeForTime, offset) {
+      var date = new Date(timeStemp * 1000);
+      obj[typeForTime + 'Minutes'] = date.getMinutes();
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (date.getMinutes().toString().length === 1) {
+<span class="cstat-no" title="statement not covered" >        obj[typeForTime + 'Minutes'] = '0' + date.getMinutes().toString();</span>
+      }
+      obj[typeForTime + 'Hours'] = this.getUTCTime(timeStemp * 1000, offset);
+    };
+&nbsp;
+    forecast.prototype.dailyInformationToNeededForecastVendor = function (array) {
+      var that = this;
+      return array.map(function (day, index) {
+        return that.oneDayInfoForecastVendor(day, index);
+      });
+    };
+&nbsp;
+    forecast.prototype.oneDayInfoForecastVendor = function (day, index) {
+      var shortNamesOfWeek = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+      var time = new Date(day.time * 1000);
+      day = {
+        today: shortNamesOfWeek[time.getDay()],
+        icon: this.weatherIconToNormalForecastVendor(day.icon),
+        temperatureCelciusMax: Math.floor(((+day.temperatureMax - 32) / 2) * 1.1),
+        temperatureForenheitsMax: Math.floor(+day.temperatureMax),
+        temperatureCelciusMin: Math.floor(((+day.temperatureMin - 32) / 2) * 1.1),
+        temperatureForenheitsMin: Math.floor(+day.temperatureMin)
+      };
+      if (index === 0) {
+        day.today = 'today';
+      }
+      return day;
+    };
+&nbsp;
+    forecast.prototype.hourlyInformationToNeededForecastVendor = function (array) {
+      var that = this;
+      return array.map(function (hour) {
+        return that.oneHourInfoForecastVendor(hour);
+      });
+    };
+&nbsp;
+    forecast.prototype.oneHourInfoForecastVendor = function (hour) {
+      var time = new Date(hour.time * 1000);
+      var hourNeeded = {
+        icon: this.weatherIconToNormalForecastVendor(hour.icon),
+        timeInHour: time.getHours(),
+        temperatureCelcius: Math.floor(((+hour.temperature - 32) / 2) * 1.1),
+        temperatureForenheits: Math.floor(+hour.temperature)
+      };
+      return hourNeeded;
+    };
+&nbsp;
+    return new forecast();
+  });
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 16 2016 11:41:10 GMT+0300 (RTZ 2 (зима))
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
